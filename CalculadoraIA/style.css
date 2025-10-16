@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: 80px repeat(5, 60px);
+  gap: 10px;
+  box-shadow: 0 0 15px #0af;
+}
+
+/* Display ocupa as 4 colunas */
+.display {
+  grid-column: 1 / -1;
+  background: #000;
+  color: #0f0;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  border: none;
+}
+
+/* Botões comuns */
+.btn {
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #555;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background: #777;
+}
+
+/* Botões operadores */
+.operator {
+  background: #0af;
+  color: white;
+}
+
+.operator:hover {
+  background: #08c;
+}
+
+/* Botão limpar */
+#clear {
+  background: #f33;
+}
+
+#clear:hover {
+  background: #c00;
+}
+
+/* Botão igual ocupa 4 colunas */
+.equals {
+  grid-column: 1 / -1;
+  background: #0a0;
+  color: white;
+  font-weight: bold;
+}
+
+.equals:hover {
+  background: #080;
+}
